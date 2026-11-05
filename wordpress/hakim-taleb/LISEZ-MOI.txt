@@ -1,0 +1,34 @@
+HAKIM TALEB — THÈME WORDPRESS
+
+Installation
+1. Sauvegarder les fichiers et la base de données du WordPress existant.
+2. Apparence > Thèmes > Ajouter un thème > Téléverser un thème.
+3. Choisir le fichier hakim-taleb-wordpress.zip, puis Installer et Activer.
+4. Visiter l’accueil, le carnet, la kinésiologie et les informations légales.
+5. Purger le cache éventuel de l’hébergeur et des extensions de cache.
+
+Le thème prépare automatiquement neuf pages et les définit dans sa navigation.
+Il affecte sa page d’accueil dans Réglages > Lecture, sans supprimer ni écraser
+les anciennes pages, les articles ou les médias. Une réactivation réutilise les
+pages préparées. Si vous changez de thème, l’ancien réglage d’accueil est rétabli
+si l’accueil de ce thème est encore sélectionné.
+
+Le design, les textes, les images, les polices locales, les animations et les
+retouches mobiles proviennent de la version HTML validée. Les liens internes
+utilisent les URL WordPress, y compris sans permaliens personnalisés et lorsque
+WordPress est installé dans un sous-dossier. Calendly et Google Maps gardent
+leurs intégrations existantes et nécessitent une connexion Internet.
+
+Les neuf pages sont des mises en page fixes : leur contenu visuel vient des
+fichiers site/*.html du thème, pas de l’éditeur Gutenberg. Pour les retouches,
+modifier ces fichiers puis reconstruire le ZIP. Les anciens contenus WordPress
+restent accessibles via un modèle de secours simple ; ils ne reprennent pas
+nécessairement la mise en page de l’ancien thème.
+
+L’indexation suit Réglages > Lecture de WordPress. Le noindex du prototype HTML
+n’est pas imposé par ce thème. Vérifier ce réglage avant la mise en ligne.
+
+Avant de remplacer le site public, tester une copie de l’hébergement avec ses
+extensions, contrôler les anciennes URL et prévoir leurs redirections. Le thème
+ne modifie pas automatiquement les anciennes URL ni les réglages des extensions.
+WordPress 6.5 minimum, PHP 7.4 minimum ; tests réalisés avec WordPress 6.8.3 et PHP 8.3.
