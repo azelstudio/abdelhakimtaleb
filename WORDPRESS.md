@@ -27,3 +27,10 @@ Installation du ZIP final avec le mécanisme `Theme_Upgrader` de WordPress 6.8.3
 Les neuf pages ont été ouvertes dans Chromium à 390 et 1440 px : réponses HTTP correctes, ressources locales présentes, absence d’erreur JavaScript, fenêtre kinésiologie et retour à l’accueil fonctionnels. Les 18 captures WordPress sont identiques aux captures HTML de référence. Ces vérifications ont été effectuées avec les permaliens simples, puis dans un sous-dossier avec des permaliens personnalisés.
 
 Les services externes ont été neutralisés pour les comparaisons visuelles ; les URL Calendly et Google Maps existantes sont conservées, mais leur fonctionnement distant n’est pas couvert par ces tests. La compatibilité avec les extensions et la configuration de l’hébergement de production reste à vérifier sur une copie de ce WordPress.
+
+
+## Redirections des anciens liens Google — version 1.0.1
+
+Le thème redirige les requêtes GET/HEAD de `/prendre-rendez-vous/` vers `/#rdv` et de `/services/` vers `/#accompagnements`, avec le statut permanent 301. Les anciennes pages restent dans WordPress ; leur affichage public est remplacé par la redirection. Les aperçus dans l’administration restent accessibles. Le comportement fonctionne également lorsque WordPress est installé dans un sous-dossier.
+
+Après installation du ZIP mis à jour, vider les caches WordPress et de l’hébergeur, puis vérifier les deux anciens liens. Les redirections sont actives uniquement lorsque le thème Hakim Taleb est actif. La mise à jour des intitulés/liens affichés dans Google dépend de sa prochaine exploration du site.

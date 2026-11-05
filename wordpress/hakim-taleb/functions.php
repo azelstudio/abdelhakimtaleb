@@ -105,3 +105,20 @@ function hakim_render_site($view) {
     $html = str_replace('</body>', $footer . '</body>', $html);
     echo $html; // Trusted theme templates; dynamic URLs are escaped above.
 }
+
+/** Keep the old Google sitelinks useful after replacing the original site. */
+function hakim_redirect_legacy_pages() {
+    if (is_admin() || is_preview() || is_customize_preview() || wp_doing_ajax()) { return; }
+    if (!in_array($_SERVER['REQUEST_METHOD'] ?? '', array('GET', 'HEAD'), true)) { return; }
+    $path = wp_parse_url(wp_unslash($_SERVER['REQUEST_URI'] ?? ''), PHP_URL_PATH);
+    if (!is_string($path)) { return; }
+    $base = trailingslashit(wp_parse_url(home_url('/'), PHP_URL_PATH) ?: '/');
+    if (strpos($path, $base) !== 0) { return; }
+    $relative = trim(substr($path, strlen($base)), '/');
+    $destinations = array('prendre-rendez-vous' => 'rdv', 'services' => 'accompagnements');
+    if (isset($destinations[$relative])) {
+        wp_safe_redirect(home_url('/#' . $destinations[$relative]), 301, 'Hakim Taleb');
+        exit;
+    }
+}
+add_action('template_redirect', 'hakim_redirect_legacy_pages', 0);

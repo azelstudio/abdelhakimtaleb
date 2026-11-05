@@ -32,3 +32,7 @@ Avant de remplacer le site public, tester une copie de l’hébergement avec ses
 extensions, contrôler les anciennes URL et prévoir leurs redirections. Le thème
 ne modifie pas automatiquement les anciennes URL ni les réglages des extensions.
 WordPress 6.5 minimum, PHP 7.4 minimum ; tests réalisés avec WordPress 6.8.3 et PHP 8.3.
+
+Version 1.0.1 : redirections permanentes des anciennes pages
+/prendre-rendez-vous/ vers /#rdv, et /services/ vers /#accompagnements.
+Après remplacement du thème déjà actif, vider les caches pour les appliquer.
